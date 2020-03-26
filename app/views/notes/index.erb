@@ -4,7 +4,7 @@
             <h2> My Notes for <%= @category.name %></h2>
         </div>
         <div class="col text-center">
-            <a href="/category/<%= category.id%>/recipes">Add Notes</a>
+            <a href="/category/<%= category.id%>/notes">Add Notes</a>
         </div>
         <div class="col text-right">
             <a href="/home"> Categories</a>
@@ -31,7 +31,7 @@
                 <tr>
                     <td colspan="5">
                         <div class="col text-center">
-                            No recipes for <%= @category.name %>, add some <a href="/category/<%= category.id%>/notes">here</a>
+                            No Notes for <%= @category.name %>, add some <a href="/category/<%= category.id%>/notes">here</a>
                         </div>
                     </td>
                 </tr>

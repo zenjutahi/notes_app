@@ -6,9 +6,9 @@ class NotesController < ApplicationController
   end
 
   post "/category/:id/notes/add" do
-    recipe = Note.new(params)
-    recipe[:category_id] = params[:id]
-    if recipe.save
+    note = Note.new(params)
+    note[:category_id] = params[:id]
+    if note.save
       redirect "/categories/#{params[:id]}/notes"
     else
       erb :"/categories/add_category"

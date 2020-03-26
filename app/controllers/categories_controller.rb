@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
 
   get "/categories/:id/notes" do
     @notes = category.notes
-    erb :"/recipes/index"
+    erb :"/notes/index"
   end
 
   get "/categories/add" do
