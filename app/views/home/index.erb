@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            My Notes Categories (<%= @current_user.username %>)
+        </div>
+        <div class="col text-center">
+            <a href="/categories/add">Add Categories</a>
+        </div>
+        <div class="col text-right">
+            <a class="btn btn-danger" href="/logout">Logout</a>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+            <th scope="col">View Notes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% unless @categories.length == 0 %>
+            <% @categories.each do |category| %>
+                <tr>
+                    <th scope="row"><%= category.id %></th>
+                    <td><%= category.name %></td>
+                    <td><a href="/categories/<%= category.id %>">Edit</a></td>
+                    <td>
+                        <form action="/categories/<%= category.id %>/delete" method="post">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button class="btn btn-danger" type="submit"> Delete</button>
+                        </form>
+                    </td>
+                    <td><a href="/categories/<%= category.id %>/notes">View</a></td>
+                </tr>
+            <%end%>
+        <%else%>
+            <tr>
+                <td colspan="5">
+                    <div class="col text-center">
+                        No Categories, add some <a href="/categories/add">here</a>
+                    </div>
+                </td>
+            </tr>
+        <%end%>
+        </tbody>
+    </table>
+</div>

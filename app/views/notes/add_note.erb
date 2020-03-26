@@ -1,0 +1,20 @@
+<div>
+    <h2>Add Note</h2>
+    <form action="/category/<%= @category_id%>/recipes/add" method="post">
+        <input type="hidden" name="" value="">
+        <div class="form-group">
+            <label>Note Name</label>
+            <input type="text" name="name" class="form-control" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+            <label>Note description</label>
+            <input type="text" name="description" class="form-control" placeholder="Description" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Add Notes</button>
+        </div>
+        <div class="form-group">
+            <p>View my notes <a href="/categories/<%= @category_id%>/notes"> here</a> </p>
+        </div>
+    </form>
+</div>

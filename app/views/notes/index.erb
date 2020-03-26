@@ -1,0 +1,41 @@
+<div>
+    <div class="row">
+        <div class="col">
+            <h2> My Notes for <%= @category.name %></h2>
+        </div>
+        <div class="col text-center">
+            <a href="/category/<%= category.id%>/recipes">Add Notes</a>
+        </div>
+        <div class="col text-right">
+            <a href="/home"> Categories</a>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+        </thead>
+        <tbody>
+            <% unless @notes.length == 0 %>
+                <% @notes.each do |note| %>
+                    <tr>
+                        <th scope="row"><%= note.id %></th>
+                        <td><%= note.name %></td>
+                        <td><%= note.description %></td>
+                    </tr>
+                <%end%>
+            <%else%>
+                <tr>
+                    <td colspan="5">
+                        <div class="col text-center">
+                            No recipes for <%= @category.name %>, add some <a href="/category/<%= category.id%>/notes">here</a>
+                        </div>
+                    </td>
+                </tr>
+            <%end%>
+        </tbody>
+    </table>
+</div>
