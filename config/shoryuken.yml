@@ -1,0 +1,9 @@
+# aws:
+#   access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+#   secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+#   region: <%= ENV['AWS_REGION'] %>
+# concurrency: 25
+# delay: 25
+# timeout: 6
+# queues:
+#   - [send_email, 6]
