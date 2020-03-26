@@ -7,7 +7,7 @@ RSpec.describe CategoriesController, type: :controller do
                 get '/categories/add'
             end
             it 'loads add category page successfully' do
-                expect(last_response.body).to include('Add categories')
+                expect(last_response.body).to include('Add Notes categorie')
             end
         end
     end
@@ -18,7 +18,7 @@ RSpec.describe CategoriesController, type: :controller do
                 get '/categories/add'
             end
             it 'loads add category page successfully' do
-                expect(last_response.body).to include('Add categories')
+                expect(last_response.body).to include('Add Notes categorie')
             end
         end
     end
