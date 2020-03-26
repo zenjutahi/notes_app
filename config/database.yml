@@ -1,0 +1,18 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: my_notes
+  pool: 40
+  username: zenjy
+  password: <%= ENV['password'] %>
+
+production:
+  uri: ENV['DATABASE_URL']
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: my_notes_test
+  pool: 40
+  username: zenjy
+  password: <%= ENV['password'] %>
