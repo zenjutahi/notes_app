@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20191008130447) do
   end
 
   create_table "notes", force: :cascade do |t|
-    t.string   "name"
+    t.string   "title"
     t.text     "description"
     t.integer  "category_id"
     t.datetime "created_at",  null: false
