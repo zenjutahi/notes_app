@@ -1,7 +1,7 @@
 FactoryBot.define do
     factory :note do
         association :category, factory: :category
-        name { Faker::Food.ingredient }
-        description { Faker::Food.description }
+        name { Faker::Movies::BackToTheFuture }
+        description { Faker::Movies::BackToTheFuture.quote }
     end
 end
